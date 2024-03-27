@@ -125,19 +125,15 @@ class LinkedListQueue:
     def size(self):
         return self.data.getLength()
 
-
     def isEmpty(self):
         return self.size()==0
-
 
     def enqueue(self, item):
         node = Node(item)
         self.data.insertAfter(self.data.tail.prev, node)
 
-
     def dequeue(self):
         return self.data.popAfter(self.data.head)
-
 
     def peek(self):
         return self.data.head.next.data
