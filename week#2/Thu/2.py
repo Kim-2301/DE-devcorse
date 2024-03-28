@@ -7,7 +7,7 @@ def solution1(n, lost, reserve):
     for i in range(1,n+1):
         if uni[i] == 2 and uni[i-1] == 0:
             uni[i-1 : i+1] = [1,1]
-        elif uni[i] == 2 and u[i+1] == 0:
+        elif uni[i] == 2 and uni[i+1] == 0:
             uni[i:i+2] = [1,1]
     cnt = [x for x in uni[1:-1] if uni[x]>0]
     return len(cnt)
