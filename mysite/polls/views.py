@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from django.http import HttpResponse
 
-# Create your views here.
+def index(request):
+    return HttpResponse("Hello, world")
+
+def some_url(request):
+    return HttpResponse("some url을 구현해봤습니다.")
